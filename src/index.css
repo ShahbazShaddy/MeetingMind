@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%;
+    --radius: 0.5rem;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 224 76% 48%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .gradient-primary {
+    @apply bg-gradient-to-br from-primary-500 to-primary-700;
+  }
+
+  .gradient-accent {
+    @apply bg-gradient-to-br from-accent-500 to-accent-700;
+  }
+
+  .gradient-soft {
+    @apply bg-gradient-to-br from-gray-50 to-gray-100;
+  }
+
+  .status-processing {
+    @apply bg-yellow-100 text-yellow-800 border-yellow-200;
+  }
+
+  .status-ready {
+    @apply bg-green-100 text-green-800 border-green-200;
+  }
+
+  .status-failed {
+    @apply bg-red-100 text-red-800 border-red-200;
+  }
+
+  .priority-high {
+    @apply bg-red-100 text-red-700 border-red-200;
+  }
+
+  .priority-medium {
+    @apply bg-yellow-100 text-yellow-700 border-yellow-200;
+  }
+
+  .priority-low {
+    @apply bg-green-100 text-green-700 border-green-200;
+  }
+
+  .skeleton {
+    @apply bg-gradient-to-r from-muted via-gray-200 to-muted bg-[length:1000px_100%] animate-shimmer;
+  }
+}
