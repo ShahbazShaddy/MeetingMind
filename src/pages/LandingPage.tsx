@@ -13,7 +13,6 @@ import {
   Users,
   Search,
   CheckCircle2,
-  Star,
   ArrowRight,
 } from 'lucide-react';
 
@@ -81,27 +80,6 @@ export function LandingPage() {
     },
   ];
 
-  const testimonials = [
-    {
-      quote: "MeetingMind has transformed how our remote team collaborates. We've saved hours every week on meeting follow-ups.",
-      author: 'Sarah Johnson',
-      role: 'VP of Product, TechCorp',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
-    },
-    {
-      quote: "The AI summaries are incredibly accurate. It's like having a personal assistant in every meeting.",
-      author: 'Michael Chen',
-      role: 'Engineering Manager, DataFlow',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
-    },
-    {
-      quote: "Action item tracking alone has paid for itself. Nothing falls through the cracks anymore.",
-      author: 'Emily Rodriguez',
-      role: 'Head of Operations, StartupXYZ',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop',
-    },
-  ];
-
   const stats = [
     { value: '10,000+', label: 'Active Teams' },
     { value: '500K+', label: 'Meetings Analyzed' },
@@ -142,9 +120,6 @@ export function LandingPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <Button variant="outline" className="px-8 py-6 text-lg rounded-xl border-2">
-                Watch Demo
-              </Button>
             </div>
 
             <div className="flex items-center justify-center space-x-8 text-sm text-gray-500">
@@ -250,48 +225,6 @@ export function LandingPage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Loved by Teams Worldwide
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See what our customers are saying about MeetingMind
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-primary-200 hover:shadow-soft transition-all animate-slide-up"
-                style={{ animationDelay: `${idx * 0.1}s` }}
-              >
-                <div className="flex items-center space-x-1 mb-4">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star key={star} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-gray-700 mb-6 leading-relaxed italic">"{testimonial.quote}"</p>
-                <div className="flex items-center space-x-3">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.author}
-                    className="w-12 h-12 rounded-full"
-                  />
-                  <div>
-                    <div className="font-semibold text-gray-900">{testimonial.author}</div>
-                    <div className="text-sm text-gray-500">{testimonial.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary-600 to-accent-600">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
@@ -308,9 +241,6 @@ export function LandingPage() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
-            <Button variant="outline" className="border-2 border-white text-white px-8 py-6 text-lg rounded-xl hover:bg-white/10 transition-all">
-              Schedule Demo
-            </Button>
           </div>
         </div>
       </section>

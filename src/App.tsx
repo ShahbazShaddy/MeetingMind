@@ -9,6 +9,14 @@ import { DashboardPage } from './pages/DashboardPage';
 import { MeetingPage } from './pages/MeetingPage';
 import { SearchPage } from './pages/SearchPage';
 import { SettingsPage } from './pages/SettingsPage';
+import { FeaturesPage } from './pages/FeaturesPage';
+import { PricingPage } from './pages/PricingPage';
+import { IntegrationsPage } from './pages/IntegrationsPage';
+import { APIPage } from './pages/APIPage';
+import { AboutPage } from './pages/AboutPage';
+import { BlogPage } from './pages/BlogPage';
+import { CareersPage } from './pages/CareersPage';
+import { ContactPage } from './pages/ContactPage';
 import { Toaster } from './components/ui/toaster';
 
 function App() {
@@ -24,6 +32,14 @@ function App() {
         <Route path="/" element={user ? <Navigate to="/dashboard" replace /> : <LandingPage />} />
         <Route path="/login" element={user ? <Navigate to="/dashboard" replace /> : <LoginPage />} />
         <Route path="/signup" element={user ? <Navigate to="/dashboard" replace /> : <SignupPage />} />
+        <Route path="/features" element={<FeaturesPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/integrations" element={<IntegrationsPage />} />
+        <Route path="/api" element={<APIPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/careers" element={<CareersPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route
           path="/dashboard"
           element={

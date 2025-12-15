@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Brain, Twitter, Linkedin, Github } from 'lucide-react';
+import { Brain, Mail, Phone } from 'lucide-react';
 
 export function LandingFooter() {
   return (
@@ -19,14 +19,11 @@ export function LandingFooter() {
               Save time, boost productivity, and never miss a detail.
             </p>
             <div className="flex items-center space-x-4">
-              <a href="#" className="w-10 h-10 rounded-lg bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a href="mailto:2022cs35@student.uet.edu.pk" className="w-10 h-10 rounded-lg bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors" title="Email">
+                <Mail className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-lg bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors">
-                <Github className="w-5 h-5" />
+              <a href="tel:+923274351956" className="w-10 h-10 rounded-lg bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition-colors" title="Phone">
+                <Phone className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -35,10 +32,10 @@ export function LandingFooter() {
           <div>
             <h3 className="font-semibold mb-4">Product</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Integrations</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">API</a></li>
+              <li><Link to="/features" className="hover:text-white transition-colors">Features</Link></li>
+              <li><Link to="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
+              <li><Link to="/integrations" className="hover:text-white transition-colors">Integrations</Link></li>
+              <li><Link to="/api" className="hover:text-white transition-colors">API</Link></li>
             </ul>
           </div>
 
@@ -46,10 +43,10 @@ export function LandingFooter() {
           <div>
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">About</Link></li>
+              <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
+              <li><Link to="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
         </div>
